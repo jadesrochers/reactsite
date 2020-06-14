@@ -1,0 +1,43 @@
+{
+  "name": "sitetemplate",
+  "version": "1.0.0",
+  "description": "Basic React Setup with webpack, babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "BABEL_ENV=jest jest",
+    "testbuild": " NODE_ENV=production BABEL_ENV=es6 webpack --config ./webpack.config.prod.js --out-dir prodbuild/ --ignore '**/__tests__/','**/enzyme.js'  src && sed -r -i 's#/bundle.js#./bundle.js#'  ./prodbuild/index.html",
+    "build": " NODE_ENV=production BABEL_ENV=es6 webpack --config ./webpack.config.prod.js --out-dir prodbuild/ --ignore '**/__tests__/','**/enzyme.js'  src",
+    "profile": "BABEL_ENV=es6 webpack --config ./webpack.config.prod.js --profile --json > webpack-stats.json",
+    "start": "BABEL_ENV=es6 webpack-dev-server --progress --port 3000 --host 127.0.0.1 --open --config ./webpack.config.dev.js"
+  },
+  "author": "Jared Desrochers",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-emotion": "^10.0.33",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.2.0",
+    "eslint-config-problems": "^4.0.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.0.1",
+    "react-test-renderer": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cdn-plugin": "^3.3.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "startbootstrap-sb-admin-2": "^4.0.7"
+  }
+}

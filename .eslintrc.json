@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    "react-hooks"
+  ],
+  "extends":  [
+    "problems",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "no-var": "warn",
+    "react/jsx-uses-react": 1,
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "allowImportExportEveryWhere": true
+  }
+}
+
